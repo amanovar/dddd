@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manohar Alam | Frontend Developer</title>
+<!-- AOS Animation Library -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f4f4f9;}
+
+/* Header & Hero */
+header{
+  width:100%;height:85vh;
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+  url("https://images.unsplash.com/photo-1555066931-4365d14bab8c") center/cover no-repeat;
+  color:white;padding:20px 50px;
+}
+nav{display:flex;justify-content:space-between;align-items:center;position:relative;}
+.logo{font-size:28px;font-weight:bold;}
+.logo span{color:#00aaff;}
+nav ul{display:flex;gap:25px;}
+nav ul li{list-style:none;}
+nav ul li a{color:white;text-decoration:none;font-size:18px;transition:0.3s;}
+nav ul li a:hover{color:#00ffff;}
+
+/* Hamburger Menu */
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  width:30px;
+  cursor:pointer;
+  gap:5px;
+}
+.menu-toggle span{
+  height:4px;
+  background:white;
+  border-radius:2px;
+  transition:0.3s;
+}
+
+.hero{margin-top:120px;}
+.hero h1{font-size:55px;}
+.hero h1 span{color:#00aaff;}
+.hero p{font-size:20px;margin-top:10px;}
+.btn{background:#00aaff;padding:12px 25px;display:inline-block;margin-top:20px;color:white;border-radius:6px;text-decoration:none;font-size:18px;transition:0.3s;}
+.btn:hover{background:#0091dd;}
+
+/* Section */
+section{padding:70px;}
+.about-main,.skills-main,.backend-main{display:flex;flex-wrap:wrap;gap:40px;justify-content:center;align-items:center;}
+.about-main img,.skills-main img,.backend-main img,.projects img{width:420px;height:auto;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.2);}
+.about-text,.skills-text,.backend-text{max-width:600px;}
+.about-text h2,.skills-text h2,.backend-text h2{font-size:40px;margin-bottom:15px;}
+.about-text h2 span,.skills-text h2 span,.backend-text h2 span{color:#00aaff;}
+.about-text p,.skills-text p,.backend-text p{font-size:17px;line-height:1.6;text-align:justify;}
+
+/* Skills Progress */
+.progress{background:#ddd;height:12px;border-radius:6px;overflow:hidden;margin-bottom:15px;}
+.progress div{height:12px;background:#00aaff;border-radius:6px;}
+
+/* Motivational Section */
+.motivation{padding:50px;background:#f0f8ff;text-align:center;color:#333;font-size:18px;line-height:1.6;border-radius:12px;margin:40px 20px;}
+
+/* Services Section */
+#services ul{margin:15px 0 30px 25px; line-height:1.6;}
+#services h3{margin-top:30px;}
+
+/* Footer */
+footer{text-align:center;padding:18px;color:white;background:#222;}
+
+/* Responsive */
+@media(max-width:1024px){
+  header{padding:20px;}
+  .hero h1{font-size:45px;}
+  .about-main img,.skills-main img,.backend-main img,.projects img{width:100%;}
+}
+@media(max-width:768px){
+  .hero h1{font-size:38px;}
+  section{padding:50px 20px;}
+  nav ul{flex-direction:column;gap:10px;margin-top:10px;display:none;}
+  nav ul.active{display:flex;background:#111;position:absolute;top:75px;left:0;right:0;padding:15px 0;flex-direction:column;}
+  nav ul li a{color:white;font-size:18px;}
+  .menu-toggle{display:flex;}
+}
+@media(max-width:480px){
+  .hero h1{font-size:32px;}
+  .hero p{font-size:18px;}
+  .btn{font-size:16px;padding:10px 20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+<nav>
+  <h2 class="logo">Manohar<span>Alam</span></h2>
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+  <ul class="nav no-search">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#backend">Backend</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <h1 data-aos="fade-right">Hi, I'm <span>Manohar Alam</span></h1>
+  <p data-aos="fade-left">Frontend Developer • UI Designer • Digital Creator</p>
+  <a href="#about" class="btn" data-aos="zoom-in">Explore More</a>
+</div>
+</header>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about-main">
+<img src="Screenshot 2025-12-04 134304.png" data-aos="fade-right">
+<div class="about-text" data-aos="fade-left">
+<h2>About <span>Me</span></h2>
+<p>
+I am <b>Manohar Alam</b>, a highly motivated and passionate <b>Frontend Developer</b> with expertise in building responsive, visually appealing, and user-friendly websites. With strong knowledge in HTML, CSS, JavaScript, UI/UX, and digital design principles, I aim to create modern, interactive, and performance-focused web experiences. I also have experience in Google Search Console, SEO basics, GitHub, website optimization, and deploying live projects. My background in printed designing and shop layout designing gives me a strong sense of color, structure, and creativity.
+</p>
+</div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="skills-main">
+<img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67" data-aos="zoom-in">
+<div class="skills-text" data-aos="fade-left">
+<h2>My <span>Skills</span></h2>
+<p>As a frontend developer, my skillset is a combination of creative design and practical coding expertise. I have strong command over HTML, CSS, and JavaScript, allowing me to craft visually clean and responsive interfaces. My knowledge of CSS Grid, Flexbox, animations, and transitions helps me create smooth and attractive layouts that adapt perfectly to all devices. I also focus on user experience, accessibility, and modern UI patterns to ensure easy navigation and professional structure.</p>
+<h3>HTML</h3><div class="progress"><div style="width:95%"></div></div>
+<h3>CSS</h3><div class="progress"><div style="width:90%"></div></div>
+<h3>JavaScript</h3><div class="progress"><div style="width:80%"></div></div>
+<h3>UI/UX Design</h3><div class="progress"><div style="width:85%"></div></div>
+<h3>Print & Shop Designing</h3><div class="progress"><div style="width:90%"></div></div>
+</div>
+</section>
+
+<!-- BACKEND FRIEND SECTION -->
+<section id="backend" class="backend-main">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" data-aos="zoom-in">
+<div class="backend-text" data-aos="fade-left">
+<h2>My Friend – <span>Backend Developer</span></h2>
+<p>My friend is a skilled <b>PHP Backend Developer</b> who specializes in writing secure, efficient, and scalable server-side code. He has a strong understanding of backend logic, database architecture, and dynamic website functionalities. His expertise covers PHP, MySQL, API development, form handling, data validation, authentication systems, and website security. By combining my frontend skills with his backend knowledge, we create powerful, fast, and feature-rich websites.</p>
+</div>
+</section>
+
+<!-- MOTIVATIONAL SECTION -->
+<section class="motivation" data-aos="fade-up">
+<p>Success is built on consistent effort, continuous learning, and the courage to try again after failure. Every project, every line of code, and every challenge faced in the journey of development teaches valuable lessons. Embrace creativity, stay curious, and never stop improving yourself. The more you practice, the stronger your skills become, and the more confident you grow. Persistence and passion are the keys to achieving excellence in coding, design, and professional growth.</p>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" style="padding:70px; background:#eef6ff;">
+  <h2 style="text-align:center; font-size:45px;" data-aos="fade-up">
+    My <span style="color:#00aaff;">Services</span>
+  </h2>
+
+  <div style="max-width:1000px; margin:40px auto; font-size:17px; line-height:1.7; text-align:justify;" data-aos="fade-up">
+    <p>
+      I am a professional <b>Frontend Developer</b> and Web Designer, skilled in creating modern, 
+      responsive, and user-friendly websites for a variety of clients. I specialize in building 
+      websites for <b>shops, dukaan businesses, educational institutes, and schools</b>, 
+      ensuring each project meets the client’s unique requirements and offers excellent user experience.
+    </p>
+    <p>
+      My services include designing layouts, creating responsive UI, integrating forms and contact 
+      systems, adding interactive features, and deploying websites live. I focus on clean code, 
+      modern design, and fast performance to make your website stand out online.
+    </p>
+
+    <h3 style="margin-top:30px;">Types of Websites I Can Build:</h3>
+    <ul style="margin:15px 0 30px 25px; line-height:1.6;" data-aos="fade-up">
+      <li>Shop Websites – Online or Offline Shop Presentation</li>
+      <li>Dukaan / Small Business Websites – Showcase Your Products & Services</li>
+      <li>Educational Websites – Course Information & Student Interaction</li>
+      <li>School Websites – Student Portal, Announcements, and Event Pages</li>
+      <li>Portfolio Websites – Personal or Professional Showcase</li>
+      <li>Landing Pages – Product or Service Promotions</li>
+      <li>Interactive Web Tools – Calculators, Forms, and More</li>
+    </ul>
+
+    <p style="text-align:center; margin-top:20px;">
+      <a href="mailto:yourmail@example.com?subject=Website%20Inquiry&body=Hello%20Manohar,%0A%0AI%20want%20to%20get%20a%20website%20built.%20Please%20contact%20me." style="background:#00aaff; color:white; padding:12px 25px; border-radius:6px; text-decoration:none; font-size:18px;" data-aos="zoom-in">
+        Contact Me to Build Your Website
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- PROJECT SECTION -->
+<section id="projects" class="projects">
+<h2 style="text-align:center; font-size:45px;" data-aos="fade-up">My <span style="color:#00aaff;">Projects</span></h2>
+<div style="text-align:center; margin:30px 0;">
+<img src="Screenshot 2025-12-04 134728.png" data-aos="zoom-in" style="max-width:650px; width:60%; border-radius:12px;">
+</div>
+<p style="max-width:1100px; margin:0 auto; font-size:17px; line-height:1.6; text-align:justify;" data-aos="fade-up">
+One of my most practical projects is my <b>Multi-Tool Calculator Website</b>, which includes a collection of 10 different calculators designed for daily, academic, and financial use. Each calculator is custom-built using HTML, CSS, and JavaScript with precise formulas, clean UI, and responsive design. This project allowed me to improve my JavaScript logic, input validation, layout design, and responsive web skills.
+</p>
+<ul style="max-width:700px; margin:20px auto 30px; font-size:17px; line-height:1.6;" data-aos="fade-up">
+<li>1. Simple Calculator</li>
+<li>2. Percentage Calculator</li>
+<li>3. Age Calculator</li>
+<li>4. BMI Calculator</li>
+<li>5. Loan / EMI Calculator</li>
+<li>6. GST Calculator</li>
+<li>7. Currency Converter</li>
+<li>8. Time Calculator</li>
+<li>9. Unit Converter</li>
+<li>10. Discount Calculator</li>
+</ul>
+<div style="text-align:center; margin-top:30px;">
+<a href="YOUR_CALCULATOR_WEBSITE_LINK_HERE" class="btn" data-aos="zoom-in">View Calculator Project</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2025 Manohar Alam | All Rights Reserved
+</footer>
+
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init({duration:1000,easing:'ease-in-out',once:true});
+
+// Hamburger Menu Toggle
+const menuToggle = document.getElementById('mobile-menu');
+const nav = document.querySelector('nav ul');
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
+</script>
+
+</body>
+</html>
