@@ -37,6 +37,7 @@
 <!-- AOS Animation Library -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 <style>
+<style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:#f4f4f9;}
 
@@ -97,8 +98,65 @@ section{padding:70px;}
 #services ul{margin:15px 0 30px 25px; line-height:1.6;}
 #services h3{margin-top:30px;}
 
-/* Footer */
-footer{text-align:center;padding:18px;color:white;background:#222;}
+/* FOOTER DESIGN */
+footer{
+  background:#111;
+  color:white;
+  padding:40px 20px;
+  margin-top:40px;
+}
+
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  max-width:1100px;
+  margin:auto;
+  gap:30px;
+}
+
+.footer-section{
+  min-width:250px;
+}
+
+.footer-section h3{
+  margin-bottom:15px;
+  font-size:20px;
+  color:#00aaff;
+}
+
+.footer-section a{
+  display:block;
+  color:#ddd;
+  text-decoration:none;
+  margin:6px 0;
+  transition:0.3s;
+}
+
+.footer-section a:hover{
+  color:#00aaff;
+  padding-left:5px;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:25px;
+  font-size:15px;
+  color:#ccc;
+  border-top:1px solid #333;
+  padding-top:15px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .footer-container{
+    flex-direction:column;
+    text-align:center;
+  }
+  .footer-section{
+    min-width:100%;
+  }
+}
 
 /* Responsive */
 @media(max-width:1024px){
@@ -119,6 +177,43 @@ footer{text-align:center;padding:18px;color:white;background:#222;}
   .hero p{font-size:18px;}
   .btn{font-size:16px;padding:10px 20px;}
 }
+
+
+/* FIX: Remove Right Side Blank Space */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Images should not stretch */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+/* OVERLAY BACKGROUND */
+#overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display:none;
+  z-index: 998;
+}
+
+
+
+/* Mobile: Hide main nav links */
+@media(max-width:768px){
+  nav ul{
+    display:none;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -127,18 +222,11 @@ footer{text-align:center;padding:18px;color:white;background:#222;}
 <header>
 <nav>
   <h2 class="logo">Manohar<span>Alam</span></h2>
-    <div class="menu-toggle" id="mobile-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-  <ul class="nav no-search">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#backend">Backend</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projects">Projects</a></li>
-  </ul>
+  
+  
+
+<div id="overlay"></div>
+
 </nav>
 <div class="hero">
   <h1 data-aos="fade-right">Hi, I'm <span>Manohar Alam</span></h1>
@@ -217,7 +305,7 @@ I am <b>Manohar Alam</b>, a highly motivated and passionate <b>Frontend Develope
     </ul>
 
     <p style="text-align:center; margin-top:20px;">
-      <a href="amanohar27@gmail.com" style="background:#00aaff; color:white; padding:12px 25px; border-radius:6px; text-decoration:none; font-size:18px;" data-aos="zoom-in">
+      <a href="mailto:yourmail@example.com?subject=Website%20Inquiry&body=Hello%20Manohar,%0A%0AI%20want%20to%20get%20a%20website%20built.%20Please%20contact%20me." style="background:#00aaff; color:white; padding:12px 25px; border-radius:6px; text-decoration:none; font-size:18px;" data-aos="zoom-in">
         Contact Me to Build Your Website
       </a>
     </p>
@@ -246,30 +334,59 @@ One of my most practical projects is my <b>Multi-Tool Calculator Website</b>, wh
 <li>10. Discount Calculator</li>
 </ul>
 <div style="text-align:center; margin-top:30px;">
-<a href="https://amanovar.github.io/hub.com/" class="btn" data-aos="zoom-in">View Calculator Project</a>
+<a href="YOUR_CALCULATOR_WEBSITE_LINK_HERE" class="btn" data-aos="zoom-in">View Calculator Project</a>
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-© 2025 Manohar Alam | All Rights Reserved
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="https://amanovar.github.io/manohar/index.html">Image to PDF Converter</a>
+      <a href="https://amanovar.github.io/manohar/QR-Code-Generator.html">Generate QR Code</a>
+      <a href="https://amanovar.github.io/manohar/Date-Calculator.html">Date Calculator</a>
+      <a href="https://amanovar.github.io/manohar/Fuel-Consumption-Calculator.html">Fuel Calculator</a>
+      <a href="https://amanovar.github.io/manohar/Time-Calculator.html">Time Calculator</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Important Pages</h3>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html">Terms & Conditions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Me</h3>
+      <a href="https://facebook.com">Facebook</a>
+      <a href="https://instagram.com">Instagram</a>
+      <a href="https://github.com">GitHub</a>
+      <a href="https://linkedin.com">LinkedIn</a>
+    </div>
+
+  </div>
+
+  
 </footer>
+
 
 <!-- JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
 AOS.init({duration:1000,easing:'ease-in-out',once:true});
 
-// Hamburger Menu Toggle
-const menuToggle = document.getElementById('mobile-menu');
-const nav = document.querySelector('nav ul');
+
+
+
+
 menuToggle.addEventListener('click', () => {
   nav.classList.toggle('active');
   menuToggle.classList.toggle('active');
 });
+
 </script>
 
 </body>
 </html>
-
-
